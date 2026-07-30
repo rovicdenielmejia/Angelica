@@ -178,9 +178,7 @@ function HomePage() {
               />
               <p className="text-secondary text-xs text-center mt-2">Tap to zoom</p>
             </div>
-            <p className="text-secondary text-center italic font-serif text-lg px-4">
-              #ItsVEEnKINGafterall
-            </p>
+
           </>
         )}
 

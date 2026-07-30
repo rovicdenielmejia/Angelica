@@ -12,11 +12,13 @@ const GuestResult = ({ guest }) => {
   }
 
   const getTableSide = (table) => {
-    const left = ["Table 1", "Table 3", "Table 5", "Table 9", "Table 12", "Table 14", "Table 16", "Principal Sponsor 1", "Principal Sponsor 2"]
-    if (left.includes(table)) return "Left Side"
-    if (table === "Principal Sponsor Long Table 1") return "Center Left"
-    if (table === "Principal Sponsor Long Table 2") return "Center Right"
-    if (table === "Parents Table") return "Front Left Side"
+    if (table === "VIP TABLE 1 (Left)") return "Left Side"
+    if (table === "VIP TABLE 2 (Right)") return "Right Side"
+    const match = table.match(/^Table (\d+)$/)
+    if (match) {
+      const num = parseInt(match[1])
+      return num % 2 === 1 ? "Left Side" : "Right Side"
+    }
     return "Right Side"
   }
   const side = getTableSide(guest.table)
