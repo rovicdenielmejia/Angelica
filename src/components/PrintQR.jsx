@@ -1,7 +1,7 @@
 import { QRCodeSVG } from 'qrcode.react'
 
 const PrintQR = () => {
-  const baseUrl = window.location.origin
+  const baseUrl = 'https://angelika-at-18th.vercel.app'
 
   return (
     <div className="invite-floral-canvas min-h-screen flex flex-col items-center justify-center p-8">

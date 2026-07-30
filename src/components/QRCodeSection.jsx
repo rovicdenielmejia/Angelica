@@ -1,7 +1,7 @@
 import { QRCodeSVG } from 'qrcode.react'
 
 const QRCodeSection = () => {
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://example.com'
+  const baseUrl = 'https://angelika-at-18th.vercel.app'
 
   const handleDownload = () => {
     const svg = document.getElementById('qr-code-svg')
