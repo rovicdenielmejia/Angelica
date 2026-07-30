@@ -22,11 +22,11 @@ const GuestResult = ({ guest }) => {
   const side = getTableSide(guest.table)
 
   return (
-    <div className="rounded-2xl p-5 border card-hover animate-fade-in-up" style={{ background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.1)' }}>
+    <div className="rounded-2xl p-5 border card-hover animate-fade-in-up" style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}>
       <div className="flex items-center justify-between gap-4">
         <div className="text-center min-w-[60px]">
           <p className="text-secondary text-[10px] uppercase tracking-[0.16em] mb-1">Table</p>
-          <h3 className="font-serif text-5xl font-medium leading-none" style={{ color: '#FFFFFF' }}>
+          <h3 className="font-serif text-5xl font-medium leading-none text-primary">
             {getSimpleTableName(guest.table)}
           </h3>
           <p className="text-secondary text-[8px] uppercase tracking-[0.12em] mt-1">
@@ -34,11 +34,11 @@ const GuestResult = ({ guest }) => {
           </p>
         </div>
 
-        <div className="w-px h-10" style={{ background: 'rgba(255,255,255,0.15)' }}></div>
+        <div className="w-px h-10" style={{ background: 'var(--color-border)' }}></div>
 
         <div className="flex-1 text-center">
           <p className="text-secondary text-[10px] uppercase tracking-[0.16em] mb-1">Name</p>
-          <h4 className="font-serif text-lg font-medium" style={{ color: '#FFFFFF' }}>
+          <h4 className="font-serif text-lg font-medium text-primary">
             {guest.name}
           </h4>
         </div>
@@ -48,9 +48,9 @@ const GuestResult = ({ guest }) => {
         onClick={handleViewTable}
         className="w-full mt-4 py-3 px-4 text-sm rounded-xl transition-colors flex items-center justify-center gap-2"
         style={{
-          background: 'rgba(255,255,255,0.08)',
-          border: '1px solid rgba(255,255,255,0.12)',
-          color: '#FFFFFF',
+          background: 'var(--color-accent-muted)',
+          border: '1px solid var(--color-border)',
+          color: 'var(--color-primary)',
         }}
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

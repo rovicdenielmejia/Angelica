@@ -14,7 +14,7 @@ const TableDetail = () => {
 
   if (tableGuests.length === 0) {
     return (
-      <div className="min-h-screen flex flex-col" style={{ background: '#0A0A0A' }}>
+      <div className="invite-floral-canvas min-h-screen flex flex-col">
         <div className="max-w-md mx-auto w-full px-4 py-8">
           <button
             onClick={() => navigate('/')}
@@ -25,7 +25,7 @@ const TableDetail = () => {
             </svg>
             Back to Seat Finder
           </button>
-          <div className="rounded-2xl p-6 border text-center shadow-soft" style={{ background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.1)' }}>
+          <div className="rounded-2xl p-6 border text-center shadow-soft" style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}>
             <p className="text-secondary">Table not found</p>
           </div>
         </div>
@@ -48,7 +48,7 @@ const TableDetail = () => {
   const side = getTableSide(decodedTableName)
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: '#0A0A0A' }}>
+    <div className="invite-floral-canvas min-h-screen flex flex-col">
       <div className="max-w-md mx-auto w-full px-4 py-6 space-y-6 pb-8">
         <button
           onClick={() => navigate('/')}
@@ -63,7 +63,7 @@ const TableDetail = () => {
         <div
           className="rounded-2xl p-3 border cursor-zoom-in hover:shadow-soft-lg transition-all"
           onClick={() => setLightboxOpen(true)}
-          style={{ background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.1)' }}
+          style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}
         >
           <img
             src={tableArrangementImage}
@@ -73,18 +73,17 @@ const TableDetail = () => {
           <p className="text-secondary text-xs text-center mt-2">Tap to zoom</p>
         </div>
 
-        <div className="rounded-2xl p-6 border shadow-soft text-center" style={{ background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.1)' }}>
+        <div className="rounded-2xl p-6 border shadow-soft text-center" style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}>
           <p className="text-secondary text-xs uppercase tracking-[0.18em] mb-2">Table</p>
-          <h2 className="font-serif text-6xl md:text-7xl font-medium" style={{ color: '#FFFFFF' }}>
+          <h2 className="font-serif text-6xl md:text-7xl font-medium text-primary">
             {getSimpleTableName()}
           </h2>
           <p className="text-secondary text-sm mt-2">
             {tableGuests.length} {tableGuests.length === 1 ? 'guest' : 'guests'} seated at this table
           </p>
-          <div className="mt-4 inline-block px-4 py-1.5 rounded-full text-xs uppercase tracking-[0.15em] font-medium" style={{
-            background: 'rgba(255,255,255,0.08)',
-            border: '1px solid rgba(255,255,255,0.15)',
-            color: '#FFFFFF',
+          <div className="mt-4 inline-block px-4 py-1.5 rounded-full text-xs uppercase tracking-[0.15em] font-medium text-primary" style={{
+            background: 'var(--color-accent-muted)',
+            border: '1px solid var(--color-border)',
           }}>
             {side}
           </div>
@@ -98,9 +97,9 @@ const TableDetail = () => {
           />
         </Lightbox>
 
-        <div className="rounded-2xl overflow-hidden border shadow-soft" style={{ background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.1)' }}>
-          <div className="px-5 py-4 border-b" style={{ background: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.08)' }}>
-            <h3 className="font-serif text-lg font-medium" style={{ color: '#FFFFFF' }}>
+        <div className="rounded-2xl overflow-hidden border shadow-soft" style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}>
+          <div className="px-5 py-4 border-b" style={{ background: 'var(--color-surface-strong)', borderColor: 'var(--color-border-light)' }}>
+            <h3 className="font-serif text-lg font-medium text-primary">
               Guests
             </h3>
           </div>
@@ -109,12 +108,12 @@ const TableDetail = () => {
               <div
                 key={guest.id}
                 className="flex items-center gap-3 py-2 border-b last:border-0"
-                style={{ borderColor: 'rgba(255,255,255,0.06)' }}
+                style={{ borderColor: 'var(--color-border-light)' }}
               >
-                <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs text-secondary" style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)' }}>
+                <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs text-secondary" style={{ background: 'var(--color-accent-muted)', border: '1px solid var(--color-border)' }}>
                   {index + 1}
                 </span>
-                <p className="text-sm font-medium" style={{ color: '#FFFFFF' }}>
+                <p className="text-sm font-medium text-primary">
                   {guest.name}
                 </p>
               </div>

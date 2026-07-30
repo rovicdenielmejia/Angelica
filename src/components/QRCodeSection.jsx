@@ -15,12 +15,12 @@ const QRCodeSection = () => {
     img.onload = () => {
       canvas.width = 400
       canvas.height = 400
-      ctx.fillStyle = '#0A0A0A'
+      ctx.fillStyle = '#FDF8F9'
       ctx.fillRect(0, 0, 400, 400)
       ctx.drawImage(img, 25, 25, 350, 350)
 
       const link = document.createElement('a')
-      link.download = 'king-philip-veronica-wedding-qr.png'
+      link.download = 'angelika-joyce-birthday-qr.png'
       link.href = canvas.toDataURL('image/png')
       link.click()
     }
@@ -35,22 +35,22 @@ const QRCodeSection = () => {
   return (
     <section className="py-6 animate-fade-in-up">
       <div className="text-center space-y-4">
-        <h2 className="font-serif text-2xl font-medium" style={{ color: '#FFFFFF' }}>
+        <h2 className="font-serif text-2xl font-medium text-primary">
           Scan to Find Your Seat
         </h2>
         <p className="text-secondary text-sm">
           Open the seat finder on your phone
         </p>
 
-        <div className="rounded-2xl p-5 border inline-block shadow-soft" style={{ background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.1)' }}>
-          <div className="p-3 rounded-xl" style={{ background: '#0A0A0A' }}>
+        <div className="rounded-2xl p-5 border inline-block shadow-soft" style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}>
+          <div className="p-3 rounded-xl" style={{ background: 'var(--color-surface-strong)' }}>
             <QRCodeSVG
               id="qr-code-svg"
               value={baseUrl}
               size={180}
               level="H"
               includeMargin={false}
-              fgColor="#FFFFFF"
+              fgColor="#5C1A2E"
             />
           </div>
         </div>
@@ -60,9 +60,9 @@ const QRCodeSection = () => {
             onClick={handleOpenLink}
             className="px-6 py-3 rounded-xl transition-colors flex items-center justify-center gap-2"
             style={{
-              background: 'rgba(255,255,255,0.08)',
-              border: '1px solid rgba(255,255,255,0.12)',
-              color: '#FFFFFF',
+              background: 'var(--color-accent-muted)',
+              border: '1px solid var(--color-border)',
+              color: 'var(--color-primary)',
             }}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

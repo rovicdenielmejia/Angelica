@@ -4,6 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #5C1A2E;
+  --color-secondary: #8B6070;
+  --color-surface: rgba(255, 255, 255, 0.55);
+  --color-surface-strong: rgba(255, 255, 255, 0.72);
+  --color-surface-subtle: rgba(255, 255, 255, 0.35);
+  --color-border: rgba(92, 26, 46, 0.18);
+  --color-border-light: rgba(92, 26, 46, 0.1);
+  --color-header: rgba(255, 255, 255, 0.82);
+  --color-input: rgba(255, 255, 255, 0.65);
+  --color-accent-muted: rgba(92, 26, 46, 0.08);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,11 +29,11 @@ html {
 
 body {
   font-family: 'Lora', Georgia, serif;
-  background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.9)), url('/Bg.jpg');
+  background: url('/backgroundf.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #FFFFFF;
+  color: var(--color-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,7 +43,12 @@ body {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.5) 50%, rgba(10,10,10,0.7) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 248, 250, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 248, 250, 0.15) 100%
+  );
 }
 
 /* Outline Floral Corner Elements */
@@ -48,9 +66,9 @@ body {
   width: 260px;
   height: 260px;
   background:
-    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%),
-    radial-gradient(circle at 70% 30%, rgba(255,255,255,0.04) 0%, transparent 40%);
-  border: 1px solid rgba(255,255,255,0.06);
+    radial-gradient(circle at 80% 20%, rgba(92, 26, 46, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(92, 26, 46, 0.04) 0%, transparent 40%);
+  border: 1px solid rgba(92, 26, 46, 0.08);
   border-radius: 0 0 0 100%;
   border-top: none;
   border-right: none;
@@ -62,9 +80,9 @@ body {
   width: 260px;
   height: 260px;
   background:
-    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 50%),
-    radial-gradient(circle at 30% 70%, rgba(255,255,255,0.04) 0%, transparent 40%);
-  border: 1px solid rgba(255,255,255,0.06);
+    radial-gradient(circle at 20% 80%, rgba(92, 26, 46, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 30% 70%, rgba(92, 26, 46, 0.04) 0%, transparent 40%);
+  border: 1px solid rgba(92, 26, 46, 0.08);
   border-radius: 0 100% 0 0;
   border-bottom: none;
   border-left: none;
@@ -79,7 +97,7 @@ body {
   content: '✦';
   position: absolute;
   font-size: 14px;
-  color: rgba(255,255,255,0.2);
+  color: rgba(92, 26, 46, 0.25);
   top: -8px;
   left: -8px;
 }
@@ -88,7 +106,7 @@ body {
   content: '✦';
   position: absolute;
   font-size: 14px;
-  color: rgba(255,255,255,0.2);
+  color: rgba(92, 26, 46, 0.25);
   bottom: -8px;
   right: -8px;
 }
@@ -105,13 +123,13 @@ body {
   content: '';
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(92, 26, 46, 0.25), transparent);
 }
 
 .floral-divider .diamond {
   width: 6px;
   height: 6px;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(92, 26, 46, 0.35);
   transform: rotate(45deg);
 }
 
@@ -120,7 +138,7 @@ body {
   position: absolute;
   width: 80px;
   height: 80px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(92, 26, 46, 0.12);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -129,7 +147,7 @@ body {
   content: '';
   position: absolute;
   inset: 8px;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(92, 26, 46, 0.08);
   border-radius: 50%;
 }
 
@@ -137,7 +155,7 @@ body {
   content: '';
   position: absolute;
   inset: 16px;
-  border: 1px solid rgba(255,255,255,0.03);
+  border: 1px solid rgba(92, 26, 46, 0.05);
   border-radius: 50%;
 }
 
@@ -156,7 +174,7 @@ body {
   position: absolute;
   width: 12px;
   height: 12px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(92, 26, 46, 0.12);
   border-radius: 50% 0 50% 0;
   pointer-events: none;
 }
@@ -182,16 +200,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1A1A1A;
+  background: rgba(255, 248, 250, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #404040;
+  background: rgba(92, 26, 46, 0.25);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #585858;
+  background: rgba(92, 26, 46, 0.4);
 }
 
 .card-hover {
@@ -200,7 +218,7 @@ body {
 
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 36px rgba(92, 26, 46, 0.16);
 }
 
 input:focus {
@@ -208,9 +226,9 @@ input:focus {
 }
 
 .floral-strip {
-  background: linear-gradient(180deg, 
-    rgba(255, 255, 255, 0.08) 0%, 
-    rgba(255, 255, 255, 0.03) 45%,
+  background: linear-gradient(180deg,
+    rgba(92, 26, 46, 0.08) 0%,
+    rgba(92, 26, 46, 0.03) 45%,
     transparent 100%
   );
 }
@@ -226,7 +244,7 @@ input:focus {
 
 /* Outline floral border for cards */
 .outline-floral-border {
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid var(--color-border);
   position: relative;
 }
 
@@ -237,12 +255,12 @@ input:focus {
   left: -1px;
   right: -1px;
   bottom: -1px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid var(--color-border-light);
   border-radius: inherit;
   pointer-events: none;
 }
 
-/* Input styles for dark theme */
+/* Input styles for light theme */
 input::placeholder {
-  color: rgba(255,255,255,0.35);
+  color: rgba(92, 26, 46, 0.4);
 }

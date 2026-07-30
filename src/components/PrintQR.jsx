@@ -4,38 +4,35 @@ const PrintQR = () => {
   const baseUrl = window.location.origin
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8" style={{ background: '#0A0A0A' }}>
-      <div className="text-center space-y-6 max-w-md border rounded-3xl p-10 shadow-soft" style={{ borderColor: 'rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.02)' }}>
+    <div className="invite-floral-canvas min-h-screen flex flex-col items-center justify-center p-8">
+      <div className="text-center space-y-6 max-w-md border rounded-3xl p-10 shadow-soft" style={{ borderColor: 'var(--color-border)', background: 'var(--color-surface-strong)' }}>
         <p className="text-secondary text-[11px] uppercase tracking-[0.2em] font-sans">
-          Wedding Reception
+          18th Birthday Celebration
         </p>
 
         <div className="space-y-1">
-          <h1 className="font-cinzel text-5xl font-medium tracking-[0.08em]" style={{ color: '#FFFFFF' }}>
-            KING PHILIP
+          <h1 className="font-cinzel text-5xl font-medium tracking-[0.08em] text-primary">
+            ANGELIKA JOYCE
           </h1>
-          <p className="font-script text-4xl text-secondary leading-none">and</p>
-          <h1 className="font-cinzel text-5xl font-medium tracking-[0.08em]" style={{ color: '#FFFFFF' }}>
-            VERONICA
-          </h1>
+          <p className="font-script text-4xl text-secondary leading-none">Cabacungan Agpata</p>
         </div>
 
-        <div className="h-px" style={{ background: 'rgba(255,255,255,0.15)' }}></div>
+        <div className="h-px" style={{ background: 'var(--color-border)' }}></div>
 
-        <p className="font-serif text-3xl tracking-[0.12em]" style={{ color: '#FFFFFF' }}>
+        <p className="font-serif text-3xl tracking-[0.12em] text-primary">
           SCAN ME
         </p>
         <p className="text-secondary text-sm">
           Find your assigned table instantly
         </p>
 
-        <div className="p-6 rounded-2xl border inline-block shadow-soft" style={{ background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.1)' }}>
+        <div className="p-6 rounded-2xl border inline-block shadow-soft" style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}>
           <QRCodeSVG
             value={baseUrl}
             size={280}
             level="H"
             includeMargin={true}
-            fgColor="#FFFFFF"
+            fgColor="#5C1A2E"
           />
         </div>
 
