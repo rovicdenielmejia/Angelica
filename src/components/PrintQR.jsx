@@ -12,7 +12,7 @@ const PrintQR = () => {
           <h1 className="font-cinzel text-5xl font-medium tracking-[0.08em] text-primary">
             ANGELIKA JOYCE
           </h1>
-          <p className="font-script text-4xl text-secondary leading-none">Cabacungan Agpata</p>
+          <p className="font-script text-4xl text-secondary leading-none">Cabacungan Agpalza</p>
         </div>
 
         <div className="h-px" style={{ background: 'var(--color-border)' }}></div>

@@ -10,7 +10,7 @@ const Hero = () => {
             ANGELIKA JOYCE
           </h1>
           <p className="font-script text-secondary text-5xl leading-none">
-            Cabacungan Agpata
+            Cabacungan Agpalza
           </p>
         </div>
 

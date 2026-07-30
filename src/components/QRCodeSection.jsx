@@ -20,7 +20,7 @@ const QRCodeSection = () => {
       ctx.drawImage(img, 25, 25, 350, 350)
 
       const link = document.createElement('a')
-      link.download = 'angelika-joyce-birthday-qr.png'
+      link.download = 'angelika-joyce-cabacungan-agpalza-qr.png'
       link.href = canvas.toDataURL('image/png')
       link.click()
     }
