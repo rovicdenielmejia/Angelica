@@ -6,9 +6,7 @@ const PrintQR = () => {
   return (
     <div className="invite-floral-canvas min-h-screen flex flex-col items-center justify-center p-8">
       <div className="text-center space-y-6 max-w-md border rounded-3xl p-10 shadow-soft" style={{ borderColor: 'var(--color-border)', background: 'var(--color-surface-strong)' }}>
-        <p className="text-secondary text-[11px] uppercase tracking-[0.2em] font-sans">
-          18th Birthday Celebration
-        </p>
+
 
         <div className="space-y-1">
           <h1 className="font-cinzel text-5xl font-medium tracking-[0.08em] text-primary">

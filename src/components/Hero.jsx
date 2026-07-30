@@ -2,9 +2,7 @@ const Hero = () => {
   return (
     <section className="py-8 px-4 animate-fade-in">
       <div className="space-y-6 text-center">
-        <p className="text-secondary text-[11px] uppercase tracking-[0.26em] font-sans">
-          18th Birthday Celebration
-        </p>
+
 
         <div className="space-y-2">
           <p className="text-secondary text-[10px] uppercase tracking-[0.18em]">The Eighteenth Birthday of</p>
